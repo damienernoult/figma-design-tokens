@@ -27,7 +27,7 @@ StyleDictionaryPackage.registerTransform({
 function getStyleDictionaryConfig(theme) {
   return {
     "source": [
-      `tokens/figma/${theme}.json`,
+      `tokens/figma/${theme}.tokens.json`,
     ],
     "platforms": {
       "web": {
@@ -47,7 +47,7 @@ console.log('Build started...');
 
 // PROCESS THE DESIGN TOKENS FOR THE DIFFEREN BRANDS AND PLATFORMS
 
-['global', 'dark', 'light'].map(function (theme) {
+['core', 'dark', 'light'].map(function (theme) {
 
     console.log('\n==============================================');
     console.log(`\nProcessing: [${theme}]`);

@@ -92,7 +92,7 @@
   "ref": {
     "color": {
       "primary": {
-        "value": "{neutral.500}",
+        "value": "{core.neutral.500}",
         "type": "color"
       }
     }

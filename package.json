@@ -3,6 +3,7 @@
     "build": "node build.js"
   },
   "dependencies": {
-    "style-dictionary": "^3.9.2"
+    "style-dictionary": "^3.9.2",
+    "token-transformer": "^0.0.33"
   }
 }
