@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "author": "Damien Ernoult",
   "scripts": {
-    "transform": "node tokens/figma/core.tokens.json output/figma/core.tokens.json",
+    "transform": "npx token-transformer tokens/figma/input/core.tokens.json tokens/figma/output/core.tokens.json",
     "build": "node build.js"
   },
   "dependencies": {
