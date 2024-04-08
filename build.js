@@ -1,8 +1,7 @@
-const StyleDictionaryPackage = require('style-dictionary');
-
+const StyleDictionary = require('style-dictionary');
 // HAVE THE STYLE DICTIONARY CONFIG DYNAMICALLY GENERATED
 
-StyleDictionaryPackage.registerFormat({
+StyleDictionary.registerFormat({
     name: 'css/variables',
     formatter: function (dictionary, config) {
       return `${this.selector} {
@@ -11,7 +10,7 @@ StyleDictionaryPackage.registerFormat({
     }
   });  
 
-StyleDictionaryPackage.registerTransform({
+  StyleDictionary.registerTransform({
     name: 'sizes/px',
     type: 'value',
     matcher: function(prop) {
@@ -52,9 +51,9 @@ console.log('Build started...');
     console.log('\n==============================================');
     console.log(`\nProcessing: [${theme}]`);
 
-    const StyleDictionary = StyleDictionaryPackage.extend(getStyleDictionaryConfig(theme));
+    const styleDictionary = StyleDictionary.extend(getStyleDictionaryConfig(theme));
 
-    StyleDictionary.buildPlatform('web');
+    styleDictionary.buildPlatform('web');
 
     console.log('\nEnd processing');
 })

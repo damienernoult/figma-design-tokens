@@ -17,5 +17,16 @@
   --core-neutral-500: #293847;
   --core-neutral-550: #1C2630;
   --core-neutral-600: #0F1419;
+  --core-coral-50: #fcebe6;
+  --core-coral-100: #f6c2b2;
+  --core-coral-200: #f2a48c;
+  --core-coral-300: #EC7B58;
+  --core-coral-400: #e86137;
+  --core-coral-500: #e23a05;
+  --core-coral-600: #ce3505;
+  --core-coral-700: #a02904;
+  --core-coral-800: #7c2003;
+  --core-coral-900: #5f1802;
   --ref-color-primary: #293847;
+  --ref-color-secondary: #e23a05;
       }
