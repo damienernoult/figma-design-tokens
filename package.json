@@ -1,8 +1,21 @@
 {
+  "name": "figma-design-tokens",
+  "license": "MIT",
+  "version": "0.0.1",
+  "author": "Damien Ernoult",
   "scripts": {
+    "transform": "node tokens/figma/core.tokens.json output/figma/core.tokens.json",
     "build": "node build.js"
   },
   "dependencies": {
-    "style-dictionary": "^3.9.2"
+    "@changesets/cli": "^2.27.1",
+    "style-dictionary": "^3.9.2",
+    "token-transformer": "^0.0.33"
+  },
+  "devDependencies": {
+    "@tokens-studio/sd-transforms": "^0.15.2"
+  },
+  "engines": {
+    "node": ">=18.*"
   }
 }

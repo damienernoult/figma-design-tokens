@@ -1,4 +1,9 @@
-const StyleDictionaryPackage = require('style-dictionary');
+const { registerTransforms } = require('@tokens-studio/sd-transforms');
+const StyleDictionary = require('style-dictionary');
+
+// will register them on StyleDictionary object
+// that is installed as a dependency of this package.
+registerTransforms(StyleDictionary);
 
 // HAVE THE STYLE DICTIONARY CONFIG DYNAMICALLY GENERATED
 
@@ -9,20 +14,20 @@ StyleDictionaryPackage.registerFormat({
         ${dictionary.allProperties.map(prop => `  --${prop.name}: ${prop.value};`).join('\n')}
       }`
     }
-  });  
+});  
 
-StyleDictionaryPackage.registerTransform({
-    name: 'sizes/px',
-    type: 'value',
-    matcher: function(prop) {
-        // You can be more specific here if you only want 'em' units for font sizes    
-        return ["fontSize", "spacing", "borderRadius", "borderWidth", "sizing"].includes(prop.attributes.category);
-    },
-    transformer: function(prop) {
-        // You can also modify the value here if you want to convert pixels to ems
-        return parseFloat(prop.original.value) + 'px';
-    }
-    });
+StyleDictionary.registerTransform({
+  name: 'sizes/px',
+  type: 'value',
+  matcher: function(prop) {
+      // You can be more specific here if you only want 'em' units for font sizes    
+      return ["fontSize", "spacing", "borderRadius", "borderWidth", "sizing"].includes(prop.attributes.category);
+  },
+  transformer: function(prop) {
+      // You can also modify the value here if you want to convert pixels to ems
+      return parseFloat(prop.original.value) + 'px';
+  }
+});
 
 function getStyleDictionaryConfig(theme) {
   return {
