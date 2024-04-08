@@ -89,7 +89,7 @@
       }
     },
     "coral": {
-      "50":  {
+      "50": {
         "value": "#fcebe6",
         "type": "color"
       },
@@ -134,11 +134,11 @@
   "ref": {
     "color": {
       "primary": {
-        "value": "{core.neutral.500}",
+        "value": "{neutral.500}",
         "type": "color"
       },
       "secondary": {
-        "value": "{core.coral.500}",
+        "value": "{coral.500}",
         "type": "color"
       }
     }
