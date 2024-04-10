@@ -8,6 +8,14 @@
       "25": {
         "value": "2px",
         "type": "spacing"
+      },
+      "50": {
+        "value": "4px",
+        "type": "spacing"
+      },
+      "100": {
+        "value": "8px",
+        "type": "spacing"
       }
     },
     "nuance": {
