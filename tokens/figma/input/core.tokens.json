@@ -149,6 +149,12 @@
         "value": "{coral.500}",
         "type": "color"
       }
+    },
+    "space": {
+      "small": {
+        "value": "{space.25}",
+        "type": "spacing"
+      }
     }
   },
   "$themes": [],
